@@ -1,0 +1,3 @@
+index=endpoint Code=4625
+| stats count by host, Account_Name
+| where count > 5
