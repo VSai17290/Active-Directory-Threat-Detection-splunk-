@@ -1,0 +1,6 @@
+index=endpoint EventCode=4625
+| stats count by Account_Name, Workstation_Name, host
+| sort - count
+
+index=endpoint EventCode=4625
+| timechart span=1h count by host
